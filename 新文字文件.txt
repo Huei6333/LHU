@@ -1,0 +1,13 @@
+如何啟動 Spring Boot:
+cd D:\app\my-first-design
+   docker-compose up --build -d
+
+關閉:
+docker-compose down
+
+網址:  
+http://localhost:8080/index.html
+http://localhost:8080/app_index.html
+
+
+
