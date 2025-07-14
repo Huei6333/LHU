@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的收藏</title>
+  <style>
+    body { margin: 0; font-family: 'Noto Sans TC', Arial, sans-serif; background: #fafbfc; }
+    .header {
+      display: flex; align-items: center; justify-content: center;
+      position: relative; height: 48px; border-bottom: 1px solid #eee; background: #fff;
+    }
+    .header .back {
+      position: absolute; left: 16px; top: 0; height: 48px; display: flex; align-items: center; font-size: 1.3em; color: #222; cursor: pointer;
+    }
+    .header .title {
+      font-weight: bold; font-size: 1.1em; letter-spacing: 1px;
+    }
+    .tabs {
+      display: flex; border-bottom: 1px solid #eee; background: #fff; margin-bottom: 8px;
+    }
+    .tab {
+      flex: 1; text-align: center; padding: 12px 0; font-size: 1em; color: #888; cursor: pointer; font-weight: 500;
+      border-bottom: 2px solid transparent;
+    }
+    .tab.active {
+      color: #e53935; border-bottom: 2px solid #e53935; font-weight: bold;
+    }
+    .section-title {
+      font-weight: bold; font-size: 1.05em; margin: 16px 0 8px 16px;
+    }
+    .books {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 0 16px 16px 16px;
+    }
+    .book-card {
+      background: #f5f6f7; border-radius: 12px; padding: 12px 8px 8px 8px; display: flex; flex-direction: column; align-items: center;
+    }
+    .book-card.highlight { background: #f3e9da; }
+    .book-img {
+      width: 100px; height: 140px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px #0001;
+    }
+    .book-title {
+      margin-top: 8px; font-size: 0.98em; color: #222; text-align: center; font-weight: 500;
+    }
+    .footer-nav {
+      position: fixed;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 400px;
+      background: #fff;
+      border-top: 1.5px solid #e0e0e0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: auto;
+      padding: 6px 0 2px 0;
+      z-index: 10;
+    }
+    .footer-nav .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 13px;
+      color: #888;
+      text-decoration: none;
+    }
+    .footer-nav .nav-item.active {
+      color: #222;
+    }
+    .footer-nav .nav-item svg {
+      margin-bottom: 2px;
+      font-size: 22px;
+    }
+    @media (min-width: 500px) {
+      body { background: #222; }
+      .main-container { max-width: 400px; margin: 0 auto; background: #fff; min-height: 100vh; }
+    }
+  </style>
+</head>
+<body>
+<div class="main-container">
+  <div class="header">
+    <span class="back" onclick="window.history.back()">&#8592;</span>
+    <span class="title">我的收藏</span>
+  </div>
+  <div class="tabs">
+    <div class="tab active">我的收藏</div>
+    <div class="tab">歷史紀錄</div>
+  </div>
+  <div class="section-title">收藏商品</div>
+  <div class="books">
+    <div class="book-card">
+      <img class="book-img" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=200&q=80" alt="The Great Gatsby">
+      <div class="book-title">The Great Gatsby</div>
+    </div>
+    <div class="book-card highlight">
+      <img class="book-img" src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=200&q=80" alt="To Kill a Mockingbird">
+      <div class="book-title">To Kill a Mockingbird</div>
+    </div>
+    <div class="book-card">
+      <img class="book-img" src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=200&q=80" alt="1984">
+      <div class="book-title">1984</div>
+    </div>
+    <div class="book-card">
+      <img class="book-img" src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=200&q=80" alt="Pride and Prejudice">
+      <div class="book-title">Pride and Prejudice</div>
+    </div>
+    <div class="book-card">
+      <img class="book-img" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=200&q=80" alt="The Catcher in the Rye">
+      <div class="book-title">The Catcher in the Rye</div>
+    </div>
+    <div class="book-card">
+      <img class="book-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=200&q=80" alt="The Lord of the Rings">
+      <div class="book-title">The Lord of the Rings</div>
+    </div>
+  </div>
+  <nav class="footer-nav">
+    <div class="nav-item">
+      <a href="homepage.html" style="display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit;">
+        <svg width="24" height="24"  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7.75 22V12H13.75V22M1.75 9L10.75 2L19.75 9V20C19.75 20.5304 19.5393 21.0391 19.1642 21.4142C18.7891 21.7893 18.2804 22 17.75 22H3.75C3.21957 22 2.71086 21.7893 2.33579 21.4142C1.96071 21.0391 1.75 20.5304 1.75 20V9Z" />
+        </svg>
+        首頁
+      </a>
+    </div>
+    <div class="nav-item active">
+      <a href="favorite.html" style="display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit;">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 01.11 7.78l-8.49 8.49a2.38 2.38 0 01-3.37 0l-3.18-3.18a2.38 2.38 0 010-3.37l8.49-8.49a5.5 5.5 0 017.78-.11z"/></svg>
+        我的收藏
+      </a>
+    </div>
+    <div class="nav-item">
+      <a href="search1.html" style="display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit;">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        搜尋
+      </a>
+    </div>
+    <div class="nav-item">
+      <a href="cart.html" style="display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit;">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+        購物車
+      </a>
+    </div>
+    <div class="nav-item">
+      <a href="personal_profile.html" style="display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit;">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-3-3.87M4 21v-2a4 4 0 013-3.87m9-7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        個人資料
+      </a>
+    </div>
+  </nav>
+</div>
+</body>
+</html> 

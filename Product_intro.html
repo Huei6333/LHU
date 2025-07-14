@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品介紹</title>
+    <style>
+        body {
+            font-family: 'Noto Sans TC', Arial, sans-serif;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 375px;
+            margin: 10px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: none;
+            border: none;
+            padding-bottom: 16px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 16px 0 16px;
+        }
+        .header .title {
+            font-weight: bold;
+            font-size: 16px;
+            flex: 1;
+            text-align: center;
+        }
+        .header .icon {
+            font-size: 20px;
+            color: #333;
+            cursor: pointer;
+        }
+        .product-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 16px 0 8px 0;
+        }
+        .product-img img {
+            width: 220px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .main-content {
+            padding: 0 18px;
+        }
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 8px 0 2px 0;
+        }
+        .product-author {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .favorite-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #f4f7fa;
+            border: none;
+            border-radius: 16px;
+            color: #7b8a9c;
+            font-size: 14px;
+            padding: 4px 12px 4px 8px;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+        .favorite-btn .heart {
+            font-size: 18px;
+            margin-right: 4px;
+        }
+        .section-label {
+            font-weight: bold;
+            font-size: 15px;
+            margin-top: 12px;
+            margin-bottom: 2px;
+        }
+        .section-content {
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+        .price {
+            font-size: 22px;
+            color: #222;
+            font-weight: bold;
+            margin: 8px 0 10px 0;
+        }
+        .product-info {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 10px;
+        }
+        .notice {
+            font-size: 13px;
+            color: #888;
+            background: #f4f7fa;
+            border-radius: 6px;
+            padding: 8px 10px;
+            margin-top: 8px;
+        }
+        .footer-btns {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            margin-top: 18px;
+        }
+        .footer-btns button {
+            flex: 1;
+            padding: 10px 0;
+            font-size: 15px;
+            font-weight: bold;
+            border: none;
+            border-radius: 22px;
+            cursor: pointer;
+        }
+        .btn-green {
+            background: #4caf50;
+            color: #fff;
+        }
+        .btn-blue {
+            background: #3b5998;
+            color: #fff;
+        }
+        .btn-orange {
+            background: #ff9800;
+            color: #fff;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="icon">&#8592;</span>
+            <span class="title">商品介紹</span>
+            <span class="icon">&#9776;</span>
+        </div>
+        <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80" alt="The Great Gatsby">
+        </div>
+        <div class="main-content">
+            <div style="display: flex; align-items: center;">
+                <div>
+                    <div class="product-title">The Great Gatsby</div>
+                    <div class="product-author">F. Scott Fitzgerald</div>
+                </div>
+                <button class="favorite-btn"><span class="heart">&#9825;</span>收藏</button>
+            </div>
+            <div class="section-label">付款方式</div>
+            <div class="section-content">現金</div>
+            <div class="section-label">價格</div>
+            <div class="price">NT$500</div>
+            <div class="section-label">商品簡介</div>
+            <div class="product-info">
+                出版社：<br>
+                出版日期：<br>
+                ISBN：
+            </div>
+            <div class="section-label">購物須知</div>
+            <div class="notice">
+                請注意，這是一本二手書，狀況相對良好，但可能有些許使用痕跡。建議於購買前仔細查看商品詳情。
+            </div>
+            <div class="footer-btns">
+                <button class="btn-green">聯絡賣家</button>
+                <button class="btn-blue">加入購物車</button>
+                <button class="btn-orange">直接購買</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
